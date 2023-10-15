@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+{% include "partial/head.njk" %}
+
+  {% css "https://fonts.googleapis.com/css?family=Open+Sans:300,700|Fira+Code:300,400|Material+Icons:400&display=swap" %}
+
+  <link rel="stylesheet" href="{{ '/site.css' | url }}">
+
+  <link rel="preload" href="{{ '/prism-material.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/prism-material.css' | url }}"></noscript>
+</head>
+
+<body class="font-sans font-light leading-normal tracking-normal text-gray-700 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
+
+  {% include "partial/navbar.njk" %}
+
+  {{ content | safe }}
+
+  {% include "partial/footer.njk" %}
+
+  <script>
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    window.lazySizesConfig.init = false;
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+  <script defer src="{{ '/blurhash.js' | url }}"></script>
+
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+  <script src="{{ '/themetoggle.js' | url }}"></script>
+  <script async src="{{ '/topscroll.js' | url }}"></script>
+
+</body>
+</html>

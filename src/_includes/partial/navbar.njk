@@ -1,0 +1,29 @@
+  <nav class="flex flex-no-wrap justify-between py-3 mx-auto lg:max-w-5xl xl:max-w-7xl">
+
+    <a class="flex-1 px-3 text-lg font-bold md:px-6 inverted whitespace-nowrap" href="{{ metadata.url }}">{{ metadata.title }}</a>
+
+    <ul class="flex items-center justify-end flex-1 sm:justify-center">
+      
+      {% for name, link in metadata.navigation %}
+      <li class="px-3 md:px-6"><a class="uppercase inverted" href="{{ link | url }}">{{ name }}</a></li>
+      {% endfor %}
+
+      <li class="hidden px-3 md:px-6 sm:list-item"><a class="inverted" href="{{ metadata.feedUrl | url }}"><i class="align-middle material-icons">rss_feed</i></a></li>
+
+      <li class="px-3 md:px-6"><a id="toggle" aria-label="light dark toggle" class="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-gray-700" href="#">
+        <i id="pref" class="align-middle material-icons">brightness_4</i>
+        <i id="moon" class="hidden align-middle material-icons">brightness_2</i>
+        <i id="sun" class="hidden align-middle material-icons">brightness_5</i>
+      </a></li>
+
+    </ul>
+
+    <ul class="items-center justify-end flex-1 hidden sm:flex">
+      {% for name, link in metadata.social %}
+      <li class="px-3 md:px-6"><a class="inverted" href="{{ link }}" aria-label="{{ name }}" rel="me noopener noreferrer" target="_blank">
+        <div class="text-2xl">{% simpleicon name %}</div>
+      </a></li>
+      {% endfor %}
+    </ul>
+
+  </nav>

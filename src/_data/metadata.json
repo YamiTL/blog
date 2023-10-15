@@ -1,0 +1,31 @@
+{
+  "title": "Yami T Lemos",
+  "subtitle": "Hi, I'm Yami",
+  "url": "",
+  "feedUrl": "/feed.rss",
+  "description": "I'm ...",
+  "author": "Yami T Lemos",
+  "navigation": {
+    "Home": "/",
+    "About": "/about"
+  },
+  "social": {
+    "twitter": "https://twitter.com/distantcam",
+    "github": "https://github.com/distantcam",
+    "instagram": "https://instagram.com/distantcam",
+    "stackoverflow": "https://stackoverflow.com/users/3820"
+  },
+  "unsplash": {
+    "default_id": "VieM9BdZKFo",
+    "default_dark_id": "0gkw_9fy0eQ",
+    "utm_source": "cam.macfar.land",
+    "common_query": "&fm=webp&q=80&crop=entropy&fit=max",
+    "sizes": [
+      "30",
+      "100",
+      "300",
+      "600",
+      "1000"
+    ]
+  }
+}

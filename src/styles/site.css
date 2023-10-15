@@ -1,0 +1,112 @@
+@tailwind base;
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: background-color 750ms, color 750ms, opacity 750ms !important;
+  transition-delay: 0 !important;
+}
+
+a {
+  @apply text-primary;
+}
+
+a:hover {
+  @apply text-gray-700 dark:text-gray-400;
+}
+
+a.inverted {
+  @apply text-gray-700 dark:text-gray-400;
+}
+
+a.inverted:hover {
+  @apply text-primary;
+}
+
+@tailwind components;
+
+@media (min-width: 768px) {
+  .post-card:nth-of-type(6n + 1) {
+    width: 100%;
+
+    & .post-card__container {
+      flex-direction: row;
+    }
+
+    & .post-card__image {
+      min-height: 24rem;
+      position: relative;
+      flex: 2 2 auto;
+      width: auto;
+    }
+  }
+}
+
+@layer utilities {
+  @layer responsive {
+    .list-item {
+      display: list-item;
+    }
+  }
+
+  @layer dark {
+    .header-shadow-dark {
+      text-shadow: 2px 2px 10px theme("colors.gray.900"),
+        -2px 2px 10px theme("colors.gray.900"),
+        2px -2px 10px theme("colors.gray.900"),
+        -2px -2px 10px theme("colors.gray.900"),
+        4px 4px 10px theme("colors.gray.900"),
+        -4px 4px 10px theme("colors.gray.900"),
+        4px -4px 10px theme("colors.gray.900"),
+        -4px -4px 10px theme("colors.gray.900");
+    }
+    .header-shadow-light {
+      text-shadow: 2px 2px 10px theme("colors.gray.100"),
+        -2px 2px 10px theme("colors.gray.100"),
+        2px -2px 10px theme("colors.gray.100"),
+        -2px -2px 10px theme("colors.gray.100"),
+        4px 4px 10px theme("colors.gray.100"),
+        -4px 4px 10px theme("colors.gray.100"),
+        4px -4px 10px theme("colors.gray.100"),
+        -4px -4px 10px theme("colors.gray.100");
+    }
+  }
+}
+
+@tailwind utilities;
+
+.icon {
+  @apply inline-flex;
+
+  & svg {
+    height: 1.3em;
+    width: 1.3em;
+    top: 0.16em;
+    position: relative;
+  }
+}
+
+.blurhash,
+.lazyload {
+  width: 100%;
+}
+
+.gallery_caption {
+  display: none;
+}
+
+.gallery {
+  & figure {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    & .full_caption {
+      display: none;
+    }
+
+    & .gallery_caption {
+      display: block;
+    }
+  }
+}

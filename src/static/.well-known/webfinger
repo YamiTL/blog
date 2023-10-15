@@ -1,0 +1,10 @@
+{
+  "subject": "acct:distantcam@hachyderm.io",
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://hachyderm.io/users/distantcam"
+    }
+  ]
+}
